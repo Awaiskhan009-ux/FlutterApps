@@ -33,6 +33,7 @@ import 'package:flutter_application_1/new.dart';
 import 'package:flutter_application_1/notesApp/NotesProvider.dart';
 import 'package:flutter_application_1/notesApp/addNotes.dart';
 import 'package:flutter_application_1/notesApp/notesApp.dart';
+import 'package:flutter_application_1/provider/providerAuth.dart';
 import 'package:flutter_application_1/screens/splashScreen.dart';
 import 'package:provider/provider.dart';
 
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(providers: [
-      ChangeNotifierProvider(create: (_)=>favProvider()),
+      ChangeNotifierProvider(create: (_)=>AuthProvider()),
     ],
     
     child: MaterialApp(

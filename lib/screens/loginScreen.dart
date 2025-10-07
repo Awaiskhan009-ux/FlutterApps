@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class LoginScreenChat extends StatefulWidget {
-  const LoginScreenChat({super.key});
+   LoginScreenChat({super.key});
 
   @override
   State<LoginScreenChat> createState() => _LoginScreenChatState();
 }
 
 class _LoginScreenChatState extends State<LoginScreenChat> {
+  final emailController= TextEditingController();
+final passwordController=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +41,7 @@ class _LoginScreenChatState extends State<LoginScreenChat> {
             Container(
               width: 350,
               child: TextField(
-              
+                controller: emailController,
                 decoration: InputDecoration(
                   floatingLabelBehavior: FloatingLabelBehavior.always,
                   contentPadding: EdgeInsets.only(bottom: 15),
@@ -60,7 +62,7 @@ class _LoginScreenChatState extends State<LoginScreenChat> {
             Container(
               width: 350,
               child: TextField(
-              
+              controller: passwordController,
                 obscureText: true,
                 obscuringCharacter: "*",
               
