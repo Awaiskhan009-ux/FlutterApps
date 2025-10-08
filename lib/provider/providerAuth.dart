@@ -23,9 +23,9 @@ Future<void> signUp(String email,String password) async{
   }
 }
 
-Future<void> SignIn(String email,String password) async{
+Future<void> signIn(String email,String password) async{
   try{
-    await _auth.createUserWithEmailAndPassword(email: email, password: password);
+    await _auth.signInWithEmailAndPassword(email: email, password: password);
 
   }
   catch(e){

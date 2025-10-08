@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/loginscreen.dart';
-import 'package:flutter_application_1/screens/SignUpScreen.dart';
-import 'package:flutter_application_1/screens/loginScreen.dart';
-import 'package:flutter_application_1/screens/SignUpScreen.dart';
+import 'package:flutter_application_1/View/MainLogin.dart';
+import 'package:flutter_application_1/View/loginscreen.dart';
+import 'package:flutter_application_1/View/SignUpScreen.dart';
+import 'package:flutter_application_1/View/loginScreen.dart';
+import 'package:flutter_application_1/View/SignUpScreen.dart';
 
 class Splash2 extends StatefulWidget {
   const Splash2({super.key});
@@ -55,7 +56,7 @@ class _Splash2State extends State<Splash2> {
                 Text("Exiting account? ",style: TextStyle(color: Colors.grey),),
                 TextButton(onPressed: (){
         
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreenChat()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginAuthScreen()));
                 }, child: Text("Log in",style: TextStyle(color: Colors.white),)),
               ],
             )
